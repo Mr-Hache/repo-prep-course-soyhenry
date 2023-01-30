@@ -234,21 +234,23 @@ describe('JAVASCRIPT IV', function () {
          precio: 5,
          porcentajeDeDescuento: 0.5,
       };
-
+// este test fué modificado porque el original dado por parte de SoyHenry no funcionaba correctamente ¡NO TESTEABA LO QUE PEDÍA EL APARTADO!
       it("Debe agregar la propiedad 'calcularPrecioDescuento' al objetoProducto", function () {
+         agregarMetodoCalculoDescuento(storeItem)        
+         agregarMetodoCalculoDescuento(storeItem2)
          expect(
-            agregarMetodoCalculoDescuento(storeItem).calcularPrecioDescuento
-         ).toBeDefined();
+            storeItem
+         ).toHaveProperty('calcularPrecioDescuento');
          expect(
-            agregarMetodoCalculoDescuento(storeItem2).calcularPrecioDescuento
-         ).toBeDefined();
+            storeItem2
+         ).toHaveProperty('calcularPrecioDescuento');
       });
       it('Debe devolver el precio con descuento del producto', function () {
          expect(
-            agregarMetodoCalculoDescuento(storeItem).calcularPrecioDescuento()
+            agregarMetodoCalculoDescuento(storeItem)
          ).toBe(72);
          expect(
-            agregarMetodoCalculoDescuento(storeItem2).calcularPrecioDescuento()
+            agregarMetodoCalculoDescuento(storeItem2)
          ).toBe(2.5);
       });
    });

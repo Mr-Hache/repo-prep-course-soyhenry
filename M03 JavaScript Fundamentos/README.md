@@ -53,7 +53,7 @@ En los primeros 6 ejercicios deberás corregir las declaraciones para que los re
 
 ---
 
-</br >
+</br > 
 
 ### **📍 EJERCICIO 02**
 
